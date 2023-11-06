@@ -1,4 +1,4 @@
-import { Menu, Button, Flex, Title } from "@mantine/core";
+import { Menu, Button, Flex, Title, Anchor } from "@mantine/core";
 import React from "react";
 import { Link } from "react-router-dom";
 import { IconMessageCircle } from "@tabler/icons-react";
@@ -20,7 +20,7 @@ const Navbar = () => {
         <Link className="lien" to="/">
           Home
         </Link>
-        <Link className="lien" to="/rooms">
+        <Link className="lien" to="/contact">
           Contact
         </Link>
         <Link className="lien" to="/about">
@@ -35,7 +35,9 @@ const Navbar = () => {
 
             <Menu.Dropdown>
               <Menu.Label>Login</Menu.Label>
-              <Menu.Item leftSection={<IconMessageCircle />}>Sign in</Menu.Item>
+              <Menu.Item leftSection={<IconMessageCircle />}>
+                <Link to="/login">Sign In</Link>
+              </Menu.Item>
             </Menu.Dropdown>
           </Menu>
         </Flex>
